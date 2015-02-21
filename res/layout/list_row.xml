@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+        android:padding="8dp" 
+         android:layout_marginTop="6dp"
+		android:background="@drawable/selector_card_background"
+		android:descendantFocusability="afterDescendants">
+
+    <com.example.rep.SwipeLayout
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:horizontalSwipeOffset="60dp"
+        >
+        <LinearLayout
+             
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="#4CAF50"
+                android:gravity="center"
+                android:layout_width="95dp"
+                android:layout_height="match_parent" >
+                <ImageView
+                android:id="@+id/call"
+                android:src="@drawable/phone"
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+                </LinearLayout>
+            <LinearLayout
+                
+                android:background="#FFA000"
+                android:gravity="center"
+                android:layout_width="95dp"
+                android:layout_height="match_parent" >
+                <ImageView
+                android:id="@+id/text"
+                android:src="@drawable/message"
+                android:layout_weight="2"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+                </LinearLayout>
+
+
+        </LinearLayout>
+        <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <!-- Thumbnail Image -->
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp" />
+
+    <!-- Movie Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <!-- Rating -->
+    <TextView
+        android:id="@+id/desig"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textSize="13sp" />
+    
+    <!-- Genre -->
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desig"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="#666666"
+        android:textSize="15sp" />
+
+    <!-- Release Year -->
+    <TextView
+        android:id="@+id/slide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#666666"
+        android:textSize="11sp" />
+</RelativeLayout>
+
+</com.example.rep.SwipeLayout>
+</RelativeLayout>

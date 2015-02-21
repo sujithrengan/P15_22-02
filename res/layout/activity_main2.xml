@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.rep.VerticalPager xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:r="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main_vertical_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/container3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        
+        android:orientation="vertical" >
+
+       
+    
+      <ListView
+          android:id="@+id/listview"
+          android:layout_marginTop="30dp"
+          android:layout_width="match_parent"
+          android:layout_height="400dp" 
+          android:headerDividersEnabled="true"
+		android:footerDividersEnabled="true"
+		android:listSelector="@android:color/transparent"
+		android:cacheColorHint="@android:color/transparent"
+		android:divider="@null"
+		android:dividerHeight="7dp"/>
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/listview"
+           android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/btn_bg"
+           android:text="   More   " />
+
+      </RelativeLayout>
+</RelativeLayout>
+    
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/svg_container"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+
+    <com.example.rep.ProgressView
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        r:arrowHeight="11dp"
+        r:arrowLength="18dp"
+        r:duration="8500"
+        r:fadeFactor="10.0"
+        r:phase="2.0"
+        r:strokeColor="#3F3F3F"
+        r:strokeWidth="2.0"
+        r:waitRadius="30dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:text="Swipe to continue"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:visibility="invisible" />
+
+</RelativeLayout>
+<RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       
+        <FrameLayout
+        android:id="@+id/container2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+    </FrameLayout>
+     <FrameLayout
+        android:id="@+id/container6"
+        android:background="@android:color/transparent"
+        android:layout_width="300dp"
+        android:layout_height="300dp" >
+
+    </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/PageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Contacts"
+            android:textColor="#ffffff"
+            android:visibility="invisible" />
+
+         <FrameLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- A vertical LinearLayout in a ScrollView. This emulates a ListView (and is lighter weight
+         than a ListView when there aren't many rows). -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="500dp" >
+
+        <!-- Note that this LinearLayout has the "animateLayoutChanges" property set to true.
+             This tells the framework to automatically animate child views (in this case, rows)
+             as they are added to and removed from the LinearLayout. -->
+        <LinearLayout android:id="@+id/container_cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:divider="?android:dividerHorizontal"
+            android:animateLayoutChanges="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+    </ScrollView>
+
+    <!-- The "empty" view to show when there are no items in the "list" view defined above. -->
+
+</FrameLayout>
+
+    </RelativeLayout>
+
+
+
+</com.example.rep.VerticalPager>
